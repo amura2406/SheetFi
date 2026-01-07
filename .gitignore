@@ -1,0 +1,12 @@
+# macOS
+.DS_Store
+
+# Google Apps Script / Clasp
+.clasp.json
+.google/
+creds.json
+client_secret.json
+
+# Node
+node_modules/
+npm-debug.log
