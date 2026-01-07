@@ -22,16 +22,15 @@ This guide will help you set up the Google Apps Script to track your crypto port
 ### 3. Configure the Script (Securely)
 1.  **Paste the Code**: Copy the contents of `Code.gs` into the script editor.
 2.  **Set Credentials**:
-    *   Go to Project settings on Apps Scripts
-    *   Add `'MORALIS_API_KEY'` with your actual key.
-    *   Add `'WALLET_ADDRESS'` with your wallet address.
-3.  **Run Setup**:
-    *   Select `setupCredentials` from the dropdown menu in the toolbar.
-    *   Click **Run**.
-    *   (Grant permissions if asked).
-4.  **Clean Up**:
-    *   **Delete** the keys you just pasted in `setupCredentials()` inside the code editor. Replace them with empty strings or comments.
-    *   This ensures your secrets are **NOT** in the code if you share it on GitHub. They are stored safely in the script's hidden properties.
+    *   Go to **Project Settings** (gear icon) on the left sidebar in Apps Script.
+    *   Scroll down to **Script Properties**.
+    *   Click **Edit script properties** -> **Add script property**.
+    *   **Required Properties**:
+        *   `MORALIS_API_KEY`: Your Moralis Web3 API Key.
+        *   `WALLET_ADDRESS`: Your primary wallet address (0x...).
+    *   **Optional Properties**:
+        *   `WALLET_ADDRESS2`: A second wallet address to track.
+        *   `FILTERED_TOKENS`: A comma-separated list of token symbols to exclude (e.g., `SCAM, BADTOKEN`).
 
 ### 4. Test It
 1.  Select `recordPortfolioSnapshot` from the dropdown.
@@ -42,7 +41,7 @@ This guide will help you set up the Google Apps Script to track your crypto port
     *   (If you see "Google hasn't verified this app", click **Advanced** -> **Go to (Script Name) (unsafe)**. It is safe because it's *your* script).
     *   Click **Allow**.
 4.  Wait for the script to finish.
-5.  Go back to your Google Sheet tab. You should see a new tab called **PortfolioHistory** with a new row showing your balance!
+5.  Go back to your Google Sheet tab. You should see a new tab called **Crypto Portfolio Breakdown** with a new row showing your assets!
 
 ## Step 5: Automate it (Triggers)
 To make it run automatically (e.g., every hour):

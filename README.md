@@ -5,6 +5,8 @@
 
 ## Features
 *   **🌍 Multi-Chain**: Tracks Ethereum, Base, BSC, Arbitrum, Optimism, and Polygon.
+*   **👛 Multi-Wallet**: Supports tracking multiple wallet addresses in a single report.
+*   **🚫 Spam Filtering**: Easily filter out unwanted tokens by symbol using Script Properties.
 *   **💧 Hyperliquid Native**: Specialized support for Hyperliquid. Tracks Spot, Perps/Margin, and native HyperEVM tokens (HYPE, USOL, UBTC, etc.).
 *   **🔒 Private & Secure**: No external databases. You own the code and the keys. Your API keys are stored securely in Google Script Properties, not in the code.
 *   **💸 Free to Run**: Uses the free tiers of Moralis and public RPCs.
@@ -14,7 +16,7 @@
 1.  Open a new Google Sheet.
 2.  Go to **Extensions** > **Apps Script**.
 3.  Copy the code from `Code.gs`.
-4.  Follow the **[Setup Guide](INSTRUCTIONS.md)** to configure your API Keys.
+4.  Follow the **[Setup Guide](INSTRUCTIONS.md)** to configure your API Keys, Addresses, and Filters.
 
 ## How It Works
 SheetFi runs a scheduled script that:
